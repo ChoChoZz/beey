@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+	  <meta charset="utf-8" />
+
+	  <!-- Set the viewport width to device width for mobile -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	  <title>Beey Motorcycle</title>
+
+	   <!-- Included Bootstrap CSS Files -->
+		<link rel="stylesheet" href="./js/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./js/bootstrap/css/bootstrap-responsive.min.css" />
+		
+		<!-- Includes FontAwesome -->
+		<link rel="stylesheet" href="./css/fontawesome/css/font-awesome.css" />
+		
+		<!-- Included Bootstrap Customization CSS Files -->	
+		<link rel="stylesheet" href="./css/bootstrap-extension.css" />
+		<link rel="stylesheet" href="./css/carousel-custom-01.css" />
+		<link rel="stylesheet" href="./js/touchTouch/assets/touchTouch/touchTouch.css" />
+		<link rel="stylesheet" href="./css/stylesheet.css" />
+
+		<!--Style for image hover-->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300|Cinzel|Exo|Orbitron|Courgette|Lobster|Pacifico|Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!--Nuevos Proyectos-->
+        <link rel="stylesheet" type="text/css" href="./css/nuevosProyectos/style.css" />
+        <script src="./js/nuevosProyectos/modernizr.custom.97074.js"></script>
+        <noscript><link rel="stylesheet" type="text/css" href="./css/nuevosProyectos/noJS.css"/></noscript>
+
+        <!--captionHover-->
+        <link rel="stylesheet" type="text/css" href="./css/captionHover/default.css" />
+		<link rel="stylesheet" type="text/css" href="./css/captionHover/component.css" />
+		<script src="./js/captionHover/modernizr.custom.js"></script>
+		<script src="./js/captionHover/toucheffects.js"></script>
+
+		<!--gridGallery-->
+		<link rel="stylesheet" type="text/css" href="./css/gridGallery/demo.css" />
+		<link rel="stylesheet" type="text/css" href="./css/gridGallery/component.css" />
+		<script src="./js/gridGallery/modernizr.custom.js"></script>
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+
+		<!--GalleryResponsive-->
+		<link rel="stylesheet" type="text/css" href="./css/responsiveGallery/style.css" />
+		<link rel="stylesheet" type="text/css" href="./css/responsiveGallery/elastislide.css" />
+
+		<link href="css/styles.css" rel="stylesheet">
+    	<link href="css/animate.css" rel="stylesheet">
+
+		<noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+		        
+        <script type="text/javascript">
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                var mapOptions = {
+                    zoom: 14,
+
+                    center: new google.maps.LatLng(19.325988, -99.138520), // Beey Motorcycle
+
+                    styles: /*[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]*/
+                    [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}]
+
+                };
+                var mapElement = document.getElementById('map');
+
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(19.325988, -99.138520),
+                    map: map,
+                    title: 'Beey Motorcycle'
+                });
+            }
+        </script>
+	</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-static-top">
+	<div class="navbar-inner ">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="#">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="./home.html"><img src="./img/logoMini1.png" alt="Beey Motorcycle"></a>
+			<div class="nav-collapse">
+				<ul class="nav ">
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Motos <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Moto A</a></li>
+							<li><a href="#">Moto B</a></li>
+							<li><a href="#">Moto C</a></li>
+							<li><a href="#">Moto D</a></li>
+							<li><a href="#">Moto E</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Coches <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Coche A</a></li>
+							<li><a href="#">Coche B</a></li>
+							<li><a href="#">Coche C</a></li>
+							<li><a href="#">Coche D</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Esculturas <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Escultura A</a></li>
+							<li><a href="#">Escultura B</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrevistas y Reportajes <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Video A</a></li>
+							<li><a href="#">Video B</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="carousel" class="">		
+	<div id="myCarousel" class="carousel slide mbottom0">
+	  <div class="carousel-inner">
+	    <div class="active item">
+	    	<img src="./img/Slider/auto_interior_baja.png" alt="" />
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Restauraci&oacute;n y Redise&ntilde;o</h1>
+					<p class="lead">Los conceptos m&aacute;s innovadores </p>
+				</div>
+			</div>
+	    </div>
+			
+	    <div class="item">
+	    	<img src="./img/Slider/herramienta_baja.png" alt="" />
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Pintura</h1>
+					<p class="lead">Los mejores acabados de pintura</p>
+				</div>
+			</div>
+	    </div>
+
+	    <div class="item">
+	    	<img src="./img/Slider/auto_baja.png" alt="" />
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Pintura</h1>
+					<p class="lead">Los mejores acabados de pintura</p>
+				</div>
+			</div>
+	    </div>
+
+	    <div class="item">
+	    	<img src="./img/Slider/motor_baja.png" alt="" />
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Motor</h1>
+					<p class="lead">Manejo con la mejor calidad de los motores</p>
+				</div>
+			</div>
+	    </div>
+
+	    <div class="item">
+	    	<img src="./img/Slider/soldadura_baja.png" alt="" />
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Soldadura</h1>
+					<p class="lead">Amplia experiencia en soldadura</p>
+				</div>
+			</div>
+	    </div>
+
+	    <div class="item">
+	    	<img src="./img/Slider/taladro_baja.png" alt="" />
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Taladro</h1>
+					<p class="lead">Los mejores acabados de pintura</p>
+				</div>
+			</div>
+	    </div>
+	
+	  </div>
+	  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+</div>
+
+<!--<div class="socialbar">
+		<a href="#"><img src="img/socials/facebook.png" alt="" /></a>
+		<a href="#"><img src="img/socials/twitter.png" alt="" /></a>
+		<a href="#"><img src="img/socials/youtube.png" alt="" /></a>
+</div>-->
+
+<div class="content vspace40">
+	<div class="container marketing ">
+		<div class="row">
+			<div class="span12 center">
+				<img src="./img/logo01.png" class="image-responsive logo img-thumbnail" >
+				<h1 class="center leesTop">Beey Motorcycle</h1>
+				<hr class="softenGold" />
+				<p class="center">Tu lo pides, Beey lo construye</p>
+			</div>
+		</div>
+		<br>
+
+		<!--<div class="row">
+			<div class="span4">
+				<div class="grid">
+					<figure class="effect-sadie">
+					<img src="./img/imageHover/ima01.jpg" alt="Motos"/>
+					<figcaption>
+						<h2><span>Motos</span></h2>
+						<p>Las motos <br>Son lo mejor</p>
+						<a href="#">Ver m&aacute;s</a>
+					</figcaption>			
+				</figure>
+				</div>
+			</div>
+
+			<div class="span4">
+				<div class="grid">
+				<figure class="effect-sadie">
+					<img src="./img/Carros/Car02.jpg" alt="Carros"/>
+					<figcaption>
+						<h2><span>Carros</span></h2>
+						<p>Los carros <br>Nosotros los hacemos</p>
+						<a href="#">Ver m&aacute;s</a>
+					</figcaption>			
+				</figure>
+				</div>
+			</div>
+
+			<div class="span4">
+				<div class="grid">
+				<figure class="effect-sadie">
+					<img src="./img/Esculturas/Avion.jpg" alt="Carros"/>
+					<figcaption>
+						<h2><span>Esculturas</span></h2>
+						<p>Inovaci&oacute;n <br>Total</p>
+						<a href="#">Ver m&aacute;s</a>
+					</figcaption>			
+				</figure>
+				</div>
+			</div>
+		</div>-->
+
+		<ul class="grid cs-style-1">
+			<li >
+				<figure class="animated fadeInUp">
+					<img src="./img/Motos/DSC05463.JPG" alt="Motos"/>
+					<figcaption>
+						<h3>Motos</h3>
+						<span>Proyectos Desarrollados </span>
+						<a href="#">Ver más</a>
+					</figcaption>
+				</figure>
+			</li>
+			<li >
+				<figure class="animated fadeInUp delay-05s">
+					<img src="./img/Carros/Car02.jpg" alt="Carros"/>
+					<figcaption>
+						<h3>Carros</h3>
+						<span>Proyectos Desarrollados</span>
+						<a href="#">Ver más</a>
+					</figcaption>
+				</figure>
+			</li>
+			<li >
+				<figure class="animated fadeInUp delay-1s">
+					<img src="./img/Esculturas/Avion.jpg" alt="Carros"/>
+					<figcaption>
+						<h3>Esculturas</h3>
+						<span>Piezas</span>
+						<a href="#">Ver más</a>
+					</figcaption>
+				</figure>
+			</li>
+		</ul>
+
+		<section class="swag center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <h1>Contactanos <span>en <em>...</em> </span></h1>
+                <a href="#footer" class="down-arrow-btn"><i class="icon-chevron-down"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+		<div class="video clearfix">
+            <div class="wrap">
+                <div class="video-title">Beeey Motorcycle te ofrece...</div>
+                <div class="video-subtitle">Creando la moto de tus sue&ntilde;os</div>
+                <br><br>
+                <div class="video-block" id="contenedor">
+                   <iframe src="https://www.youtube.com/embed/XcwuzB5Pqn0" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="embed-responsive-item"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <hr class="soften" />
+		
+		<div class="row">
+			<div class="span12">
+				<h1 class="center">Nuevos proyectos</h1>
+				<hr class="softenGold" />
+				<p class="center">2 Ruedas</p>
+			</div>
+		</div>
+			<br>
+			<div id="grid-gallery" class="grid-gallery">
+				<section class="grid-wrap1">
+					<ul class="grid1">
+						<li class="grid-sizer"></li><!-- for Masonry column width -->
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/01.jpg" alt="img01"/>
+								<figcaption><h3 class="center">Motorcycle Road</h3></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/12.jpg" alt="img02"/>
+								<figcaption><h3 class="center">Harley - Iron 1300</h3></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/08.jpg" alt="img03"/>
+								<figcaption><h3 class="center">Harley - 1200 Custom</h3></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/13.jpg" alt="img04"/>
+								<figcaption><h3 class="center">Harley - Street 1750</h3></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/09.jpg" alt="img05"/>
+								<figcaption><h3 class="center">Harley - V-Road Muscle</h3></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/06.jpg" alt="img06"/>
+								<figcaption><h3 class="center">Harley - Wide Glide</h3></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/14.jpg" alt="img01"/>
+								<figcaption><h3 class="center">Harley - Forty-Eight</h3></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="./img/nuevosProyectos/Motocicleta/07.jpg" alt="img02"/>
+								<figcaption><h3 class="center">Harley - Softail Slim</h3></figcaption>
+							</figure>
+						</li>
+
+					</ul>
+				</section><!-- // grid-wrap -->
+
+				<section class="slideshow">
+					<ul>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Motorcycle Road</h3>
+									<p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/HD12.jpg" alt="img01"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Harley - Iron 1300</h3>
+									<p>Chillwave Echo Park Etsy organic Cosby sweater seitan authentic pour-over. Occupy wolf selvage bespoke tattooed, cred sustainable Odd Future hashtag butcher.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/2222.jpg" alt="img02"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Harley - 1200 Custom</h3>
+									<p>IPhone PBR polaroid before they sold out meh you probably haven't heard of them leggings tattooed tote bag, butcher paleo next level single-origin coffee photo booth.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/moto3.jpg" alt="img03"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Harley - Street 1750</h3>
+									<p>Vice cliche locavore mumblecore vegan wayfarers asymmetrical letterpress hoodie mustache. Shabby chic lomo polaroid, scenester 8-bit Portland Pitchfork VHS tote bag.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/15-hd-street-750-4-large.jpg" alt="img04"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Harley - V-Road Muscle</h3>
+									<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird on it craft beer Etsy.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/moto4.jpg" alt="img05"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Harley - Wide Glide</h3>
+									<p>Cosby sweater hella lomo Thundercats VHS occupy High Life. Synth pop-up readymade single-origin coffee, fanny pack tousled retro. Fingerstache mlkshk ugh hashtag, church-key ethnic street art pug yr.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/moto1.jpg" alt="img06"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Harley - Forty-Eight</h3>
+									<p>Ethnic readymade pug, small batch XOXO Odd Future normcore kogi food truck craft beer single-origin coffee banh mi photo booth raw denim. XOXO messenger bag pug VHS. Forage gluten-free polaroid, twee hoodie chillwave Helvetica.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/hd_for.jpg" alt="img01"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3 class="center">Harley - Softail Slim</h3>
+									<p>Thundercats pour-over four loko skateboard Brooklyn, Etsy sriracha leggings dreamcatcher narwhal authentic 3 wolf moon synth Portland. Shabby chic photo booth Blue Bottle keffiyeh, McSweeney's roof party Carles.</p>
+								</figcaption>
+								<img src="./img/nuevosProyectos/Motocicleta/moto2.jpg" alt="img02"/>
+							</figure>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon">Navega con las flechas</div>
+				</section><!-- // slideshow -->
+			</div><!-- // grid-gallery -->
+
+		<br><br><br>
+		
+		<div class="row">
+			<div class="span12">
+				<p class="center">4 Ruedas</p>
+				<hr class="softenGold" />
+			</div>
+		</div>
+
+			<div id="rg-gallery" class="rg-gallery">
+					<div class="rg-thumbs">
+						<!-- Elastislide Carousel Thumbnail Viewer -->
+						<div class="es-carousel-wrapper">
+							<div class="es-nav">
+								<span class="es-nav-prev">Anterior</span>
+								<span class="es-nav-next">Siguiente</span>
+							</div>
+							<div class="es-carousel">
+								<ul>
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/00.jpg" data-large="./img/nuevosProyectos/Carro/00.jpg" alt="image02" data-description="Compra del carro" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/000.jpg" data-large="./img/nuevosProyectos/Carro/000.jpg" alt="image03" data-description="Reconstrucción del chasis " /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/01.jpg" data-large="./img/nuevosProyectos/Carro/01.jpg" alt="image04" data-description="Colocación de eje trasero" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/02.jpg" data-large="./img/nuevosProyectos/Carro/02.jpg" alt="image05" data-description="Instalación de suspención" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/03.jpg" data-large="./img/nuevosProyectos/Carro/03.jpg" alt="image06" data-description="Amortiguador y ejes" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/04.jpg" data-large="./img/nuevosProyectos/Carro/04.jpg" alt="image07" data-description="Barras Pintadas" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/05.jpg" data-large="./img/nuevosProyectos/Carro/05.jpg" alt="image08" data-description="Chasis y ejes" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/06.jpg" data-large="./img/nuevosProyectos/Carro/06.jpg" alt="image09" data-description="Suspeción, chasis  y ejes restaurados" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/07.jpg" data-large="./img/nuevosProyectos/Carro/07.jpg" alt="image10" data-description="Chasis y ejes 2" /></a></li>
+
+									<li><a href="#"><img src="./img/nuevosProyectos/Carro/08.jpg" data-large="./img/nuevosProyectos/Carro/08.jpg" alt="image11" data-description="Chasis y ejes 3" /></a></li>
+
+								</ul>
+							</div>
+						</div>
+						<!-- End Elastislide Carousel Thumbnail Viewer -->
+					</div><!-- rg-thumbs -->
+				</div><!-- rg-gallery -->
+
+		<hr class="soften" />
+
+		
+	</div>
+</div>
+
+<footer id="footer" class="vspace20">
+	<div class="container">
+		<div class="row">
+			<div class="span4">
+				<h4>Beey Motorcycle - Contacto</h4>
+				<br>
+				<p class="textFooter"><i class="icon-map-marker"></i>&nbsp; Direcci&oacute;n: Hector Fierro #3 Esquina con calzada de Tlalpan Colonia Emiliano Zapata, Delegación coyoacan, C.P.04815</p>
+				<p class="textFooter"><i class="icon-phone"></i>&nbsp; Tel&eacute;fono: 56-74-51-66</p>
+				<p class="textFooter"><i class="icon-facebook "></i>&nbsp; Facebook: <a target="_blank" href="https://es-es.facebook.com/BeeyMotorcycle.Mx">Beey Motorcycle M&eacute;xico</a></p>
+				<p class="textFooter"><i class="icon-envelope"></i>&nbsp; Email: beeymotorcycle@gmail.com</p>
+			</div> 
+	
+			<div class="span8" id="map">
+				
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="span12 class="text-center"">
+				<p >Desarrollado por&nbsp;<a href="#">GeanWeb</a></p>
+			</div>
+		</div>
+	</div>
+</footer>
+	<a class="scrolltotop" href="#"><span><i class="icon-chevron-up"></i></span></a>
+	
+	<script src="./js/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script src="./js/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="./js/jquery-validate/assets/js/jquery.validate.min.js"></script>
+	<script src="./js/jquery-validate/assets/js/messages_it.js"></script>
+	<script src="./js/jquery.isotope.min.js"></script>
+	<script src="./js/touchTouch/assets/touchTouch/touchTouch.jquery.js"></script>
+
+	<script src="./js/holder.js"></script>
+	<script src="./js/script.js"></script>
+
+
+	<script type="text/javascript" src="./js/nuevosProyectos/jquery.hoverdir.js"></script>	
+	<script type="text/javascript">
+		$(function() {
+			$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+		});
+	</script>
+
+	<script src="./js/gridGallery/imagesloaded.pkgd.min.js"></script>
+	<script src="./js/gridGallery/masonry.pkgd.min.js"></script>
+	<script src="./js/gridGallery/classie.js"></script>
+	<script src="./js/gridGallery/cbpGridGallery.js"></script>
+	<script>
+		new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+	</script>
+
+	<script type="text/javascript" src="./js/responsiveGallery/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="./js/responsiveGallery/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="./js/responsiveGallery/jquery.elastislide.js"></script>
+	<script type="text/javascript" src="./js/responsiveGallery/gallery.js"></script>
+</body>
+</html>

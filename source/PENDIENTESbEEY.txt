@@ -1,0 +1,23 @@
+Colores
+
+http://pltts.me/palettes/1597233
+
+Efectos Hover:
+http://tympanus.net/Development/HoverEffectIdeas/
+
+H circulo:
+http://tympanus.net/Tutorials/CircleHoverEffects/index7.html
+
+Inicio
+http://tympanus.net/Development/AnimatedHeaderBackgrounds/
+http://tympanus.net/Development/OpeningSequence/
+
+http://tympanus.net/Freebies/Boxify/
+
+
+Implementar nueva galeria
+Unir efecto de seguimiento
+Cambior colore scategorias
+Cambior color del titulo del video
+Arreglar pie de página
+Efectos de entrada
